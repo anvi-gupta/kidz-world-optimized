@@ -89,6 +89,13 @@ function updateCart(){
     cartValue.innerHTML=cart;
 }
 
+for(let i=0;i<addButtons.length;i++){
+    addButtons[i].onclick=(e)=>{
+        items[i].quantity++;
+        updateCart();
+    }
+}
+
 function updatePrice(){
     let totalPriceInCents=0;
     for(index=0;index<items.length;index++){
